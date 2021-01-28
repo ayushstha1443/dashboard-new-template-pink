@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <input type="checkbox" id="nav-toggle">
     <div class="sidebar">
       <div class="sidebar-brand">
         <a href="#" class="wp-travel-logo">
@@ -83,7 +84,7 @@
     <div id="London" class="tabcontent main-content">
       <header>
         <h2>
-          <label for="">
+          <label for="nav-toggle">
             <span class="las la-bars"></span>
           </label>
           Dashboard
@@ -153,44 +154,47 @@
                 </button>
               </div>
               <div class="card-body">
-                <table width="100%">
-                  <thead>
-                    <tr>
-                      <td>Trip Title</td>
-                      <td>Location</td>
-                      <td>People</td>
-                      <td>Total Price</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Summer Vacation</td>
-                      <td>Goa</td>
-                      <td>
-                        <!-- <span class="status purple"></span> -->
-                        10
-                      </td>
-                      <td>2,00,000</td>
-                    </tr>
-                    <tr>
-                      <td>Destination Marriage</td>
-                      <td>Paris</td>
-                      <td>
-                        <!-- <span class="status pink"></span> -->
-                        200
-                      </td>
-                      <td>5,00,00,000</td>
-                    </tr>
-                    <!-- <tr>
-                      <td>App</td>
-                      <td>UI Team</td>
-                      <td>
-                        <span class="status orange"></span>
-                        pending
-                      </td>
-                    </tr> -->
-                  </tbody>
-                </table>
+                <div class="table-responsive">
+                  <table width="100%">
+                    <thead>
+                      <tr>
+                        <td>Trip Title</td>
+                        <td>Location</td>
+                        <td>People</td>
+                        <td>Total Price</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Summer Vacation</td>
+                        <td>Goa</td>
+                        <td>
+                          <!-- <span class="status purple"></span> -->
+                          10
+                        </td>
+                        <td>2,00,000</td>
+                      </tr>
+                      <tr>
+                        <td>Destination Marriage</td>
+                        <td>Paris</td>
+                        <td>
+                          <!-- <span class="status pink"></span> -->
+                          200
+                        </td>
+                        <td>5,00,00,000</td>
+                      </tr>
+                      <!-- <tr>
+                        <td>App</td>
+                        <td>UI Team</td>
+                        <td>
+                          <span class="status orange"></span>
+                          pending
+                        </td>
+                      </tr> -->
+                    </tbody>
+                  </table>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -286,8 +290,28 @@
       </main>
     </div>
 
-    <div id="Paris" class="tabcontent">
-      <h2 class="paris-bhai">Hello Paris</h2>
+    <div id="Paris" class="tabcontent main-content">
+      <header>
+        <h2>
+          <label for="nav-toggle">
+            <span class="las la-bars"></span>
+          </label>
+           Bookings
+        </h2>
+
+        <!-- <div class="search-wrapper">
+          <span class="las la-search"></span>
+          <input type="search" placeholder="Search here" />
+        </div>
+
+        <div class="user-wrapper">
+          <img src="images/" width="40px" height="40px" alt="" />
+          <div>
+            <h4>Ayush Shrestha</h4>
+            <small>Super Admin</small>
+          </div>
+        </div> -->
+      </header>
     </div>
 
     <div id="Japan" class="tabcontent">
