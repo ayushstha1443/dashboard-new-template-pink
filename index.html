@@ -11,6 +11,12 @@
       rel="stylesheet"
     />
 
+    <!-- FontAwesome CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- FontAwesome JS -->
+    <script src="https://kit.fontawesome.com/7c3541d857.js" crossorigin="anonymous"></script>
+
     <!-- Line Awesome -->
     <link
       rel="stylesheet"
@@ -23,51 +29,58 @@
   <body>
     <div class="sidebar">
       <div class="sidebar-brand">
-        <h2><span class="lab la-accusoft"></span>Accusoft</h2>
+        <a href="#" class="wp-travel-logo">
+          <img
+            src="images/wp-travel-log.png"
+            alt="WP Travel"
+            class="img-fluid"
+          />
+          <span class="logo-title">WP Travel</span>
+        </a>
       </div>
       <div class="sidebar-menu">
-        <ul>
+        <ul class="tab">
           <li>
-            <a href="#" class="active"
+            <a href="#" class="tablinks active" onclick="openCity(event, 'London')" id="defaultOpen"
               ><span class="las la-igloo"></span> <span>Dashboard</span></a
             >
           </li>
           <li>
-            <a href="#"
-              ><span class="las la-users"></span> <span>Customers</span></a
+            <a href="#" class="tablinks" onclick="openCity(event, 'Paris')"
+              ><span class="las la-clipboard-list"></span> <span>Bookings</span></a
             >
           </li>
           <li>
-            <a href="#"
-              ><span class="las la-clipboard-list"></span>
-              <span>Projects</span></a
+            <a href="#" class="tablinks" onclick="openCity(event, 'Japan')"
+              ><span class="fas fa-plane"></span>
+              <span>Trips</span></a
             >
           </li>
           <li>
-            <a href="#"
-              ><span class="las la-shopping-bag"></span> <span>Orders</span></a
+            <a href="#" class="tablinks" onclick="openCity(event, 'France')"
+              ><span class="las la-shopping-bag"></span> <span>Wishlists</span></a
             >
           </li>
           <li>
-            <a href="#"
-              ><span class="las la-receipt"></span> <span>Inventory</span></a
+            <a href="#" class="tablinks" onclick="openCity(event, 'Nepal')"
+              ><span class="fas fa-address-book"></span> <span>Address</span></a
             >
           </li>
           <li>
-            <a href="#"
-              ><span class="las la-user-circle"></span> <span>Accounts</span></a
+            <a href="#" class="tablinks" onclick="openCity(event, 'India')"
+              ><span class="las la-user-circle"></span> <span>Account</span></a
             >
           </li>
           <li>
-            <a href="#"
-              ><span class="las la-clipboard-list"></span> <span>Tasks</span></a
+            <a href="#" class="tablinks" onclick="openCity(event, 'China')"
+              ><span class="fas fa-power-off"></span> <span>Logout</span></a
             >
           </li>
         </ul>
       </div>
     </div>
 
-    <div class="main-content">
+    <div id="London" class="tabcontent main-content">
       <header>
         <h2>
           <label for="">
@@ -76,7 +89,7 @@
           Dashboard
         </h2>
 
-        <div class="search-wrapper">
+        <!-- <div class="search-wrapper">
           <span class="las la-search"></span>
           <input type="search" placeholder="Search here" />
         </div>
@@ -87,24 +100,15 @@
             <h4>Ayush Shrestha</h4>
             <small>Super Admin</small>
           </div>
-        </div>
+        </div> -->
       </header>
 
       <main>
         <div class="cards">
           <div class="card-single">
             <div>
-              <h1>54</h1>
-              <span>Customers</span>
-            </div>
-            <div>
-              <span class="las la-users"></span>
-            </div>
-          </div>
-          <div class="card-single">
-            <div>
-              <h1>79</h1>
-              <span>Projects</span>
+              <h1>10</h1>
+              <span>Bookings</span>
             </div>
             <div>
               <span class="las la-clipboard-list"></span>
@@ -112,17 +116,26 @@
           </div>
           <div class="card-single">
             <div>
-              <h1>124</h1>
-              <span>Orders</span>
+              <h1>8</h1>
+              <span>Trips</span>
             </div>
             <div>
-              <span class="las la-shopping-bag"></span>
+              <span class="fas fa-plane"></span>
             </div>
           </div>
           <div class="card-single">
             <div>
-              <h1>$5k</h1>
-              <span>Income</span>
+              <h1>30</h1>
+              <span>People</span>
+            </div>
+            <div>
+              <span class="las la-users"></span>
+            </div>
+          </div>
+          <div class="card-single">
+            <div>
+              <h1>100k</h1>
+              <span>Price</span>
             </div>
             <div>
               <span class="lab la-google-wallet"></span>
@@ -131,58 +144,172 @@
         </div>
 
         <div class="recent-grid">
-            <div class="projects">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Recent Projects</h2>
-                        <button>See all <span class="las la-arrow-right">
-
-                        </span></button>
+          <div class="projects">
+            <div class="card">
+              <div class="card-header">
+                <h3>Recent Trips</h3>
+                <button>
+                  See all <span class="las la-arrow-right"> </span>
+                </button>
+              </div>
+              <div class="card-body">
+                <table width="100%">
+                  <thead>
+                    <tr>
+                      <td>Trip Title</td>
+                      <td>Location</td>
+                      <td>People</td>
+                      <td>Total Price</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Summer Vacation</td>
+                      <td>Goa</td>
+                      <td>
+                        <!-- <span class="status purple"></span> -->
+                        10
+                      </td>
+                      <td>2,00,000</td>
+                    </tr>
+                    <tr>
+                      <td>Destination Marriage</td>
+                      <td>Paris</td>
+                      <td>
+                        <!-- <span class="status pink"></span> -->
+                        200
+                      </td>
+                      <td>5,00,00,000</td>
+                    </tr>
+                    <!-- <tr>
+                      <td>App</td>
+                      <td>UI Team</td>
+                      <td>
+                        <span class="status orange"></span>
+                        pending
+                      </td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="customers">
+            <div class="card">
+              <div class="card-header">
+                <h3>New Customer</h3>
+                <button>
+                  See all <span class="las la-arrow-right"></span>
+                </button>
+              </div>
+              <div class="card-body">
+                <div class="customer">
+                  <div>
+                    <img src="" width="40px" height="40px" alt="" />
+                    <div>
+                      <h4>Ayush Shrestha</h4>
+                      <small>Web Developer</small>
                     </div>
-                    <div class="card-body">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Project Title</td>
-                                    <td>Department</td>
-                                    <td>Status</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>UI/UX Design</td>
-                                    <td>UI Team</td>
-                                    <td>
-                                        <span class="status"></span>
-                                        review
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Web Development</td>
-                                    <td>Frontend</td>
-                                    <td>
-                                        <span class="status"></span>
-                                        in progress
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>App</td>
-                                    <td>UI Team</td>
-                                    <td>
-                                        <span class="status"></span>
-                                        pending
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                  </div>
+                  <div>
+                    <span class="las la-user-circle"></span>
+                    <span class="las la-comment"></span>
+                    <span class="las la-phone"></span>
+                  </div>
                 </div>
-            </div>
-            <div class="customers">
 
+                <div class="customer">
+                  <div>
+                    <img src="" width="40px" height="40px" alt="" />
+                    <div>
+                      <h4>Ayush Shrestha</h4>
+                      <small>Web Developer</small>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="las la-user-circle"></span>
+                    <span class="las la-comment"></span>
+                    <span class="las la-phone"></span>
+                  </div>
+                </div>
+
+                <div class="customer">
+                  <div>
+                    <img src="" width="40px" height="40px" alt="" />
+                    <div>
+                      <h4>Ayush Shrestha</h4>
+                      <small>Web Developer</small>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="las la-user-circle"></span>
+                    <span class="las la-comment"></span>
+                    <span class="las la-phone"></span>
+                  </div>
+                </div>
+
+                <div class="customer">
+                  <div>
+                    <img src="" width="40px" height="40px" alt="" />
+                    <div>
+                      <h4>Ayush Shrestha</h4>
+                      <small>Web Developer</small>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="las la-user-circle"></span>
+                    <span class="las la-comment"></span>
+                    <span class="las la-phone"></span>
+                  </div>
+                </div>
+
+                <div class="customer">
+                  <div>
+                    <img src="" width="40px" height="40px" alt="" />
+                    <div>
+                      <h4>Ayush Shrestha</h4>
+                      <small>Web Developer</small>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="las la-user-circle"></span>
+                    <span class="las la-comment"></span>
+                    <span class="las la-phone"></span>
+                  </div>
+                </div>
+
+                
+              </div>
             </div>
+          </div> -->
         </div>
       </main>
     </div>
+
+    <div id="Paris" class="tabcontent">
+      <h2 class="paris-bhai">Hello Paris</h2>
+    </div>
+
+    <div id="Japan" class="tabcontent">
+      <h2 class="paris-bhai">Hello Japan</h2>
+    </div>
+
+    <div id="France" class="tabcontent">
+      <h2 class="paris-bhai">Hello France</h2>
+    </div>
+
+    <div id="Nepal" class="tabcontent">
+      <h2 class="paris-bhai">Hello Nepal</h2>
+    </div>
+
+    <div id="India" class="tabcontent">
+      <h2 class="paris-bhai">Hello India</h2>
+    </div>
+
+    <div id="China" class="tabcontent">
+      <h2 class="paris-bhai">Hello China</h2>
+    </div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

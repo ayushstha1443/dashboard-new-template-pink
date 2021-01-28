@@ -1,5 +1,5 @@
 :root {
-    --main-color: #DD2F6E;
+    --main-color: #17801c;
     --color-dark: #1D2231;
     --text-grey: #8390A2;
 }
@@ -138,5 +138,72 @@ main {
 .card-single:last-child h1,
 .card-single:last-child div:first-child span,
 .card-single:last-child div:last-child span {
+    color: #fff;
+}
+
+/*---------------- Table CSS -------------------*/
+.recent-grid {
+    margin-top: 3.5rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 100% auto;
+}
+.card {
+    background: #fff;
+    border-radius: 5px;
+}
+.card-header,
+.card-body {
+    padding: 1rem;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+.card-header button {
+    background: var(--main-color);
+    border-radius: 10px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem 1rem;
+    border: 1px solid var(--main-color);
+}
+table {
+    border-collapse: collapse;
+}
+thead tr {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+}
+thead td {
+    font-weight: 700;
+}
+td {
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    color: #222;
+}
+.paris-bhai {
+    color: #222;
+    position: absolute;
+    z-index: 222;
+    left: 23rem;
+}
+
+
+.sidebar-brand .wp-travel-logo img {
+    width: 75px;
+    max-width: 100%;
+    position: relative;
+    top: 14px;
+    left: 40px;
+}
+.sidebar-brand .wp-travel-logo .logo-title {
+    position: absolute;
+    top: 33px;
+    left: 133px;
+    font-size: 25px;
     color: #fff;
 }
